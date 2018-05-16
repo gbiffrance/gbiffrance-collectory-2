@@ -1,0 +1,51 @@
+h1 {
+    border-bottom: 4px solid #cc424e;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    margin-top: 0;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#sidebarBoxXXX, #dataset-search {
+    border : 1px solid #DDD;
+    background-color: transparent;
+}
+
+#sidebarBoxXXX hr{
+    margin-top: 10px;
+}
+
+.sidebar-header h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.2em;
+}
+
+#dsFacets h4, #currentFilter h4{
+    font-size: 1em;
+    font-weight: 300;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    margin-top: 0px;
+    border-bottom: 1px dotted rgb(203, 59, 89);
+    text-transform: uppercase;
+    color: rgb(203, 59, 89);
+}
+
+#currentFilter a{
+    color: rgb(203, 59, 89);
+}
+
+#resultsReturned {
+    font-size: 16px !important;
+}
+

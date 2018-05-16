@@ -2,7 +2,7 @@
 <g:set var="orgNameShort" value="${grailsApplication.config.skin.orgNameShort}"/>
 <g:applyLayout name="main">
   <head>
-    <title><g:layoutTitle/></title>
+    <title>FRANCE | <g:layoutTitle/></title>
     <g:set var="fluidLayout" value="${pageProperty(name:'meta.fluidLayout')?:grailsApplication.config.skin?.fluidLayout}"/>
     <meta name="breadcrumb" content="${pageProperty(name: 'meta.breadcrumb', default: pageProperty(name: 'title').split('\\|')[0].decodeHTML())}"/>
     <meta name="breadcrumbParent" content="${pageProperty(name: 'meta.breadcrumbParent', default: "${createLink(action: 'map', controller: 'public')},${message(code: 'breadcrumb.collections')}")}"/>

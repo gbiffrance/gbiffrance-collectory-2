@@ -1,6 +1,6 @@
-grails.project.groupId = "au.org.ala" // change this to alter the default package name and Maven publishing destination
+grails.project.groupId = "fr.gbif.portail" // change this to alter the default package name and Maven publishing destination
 
-appName = "ala-collectory"
+appName = "gbiffrance-collectory"
 
 grails.appName = appName
 
@@ -21,37 +21,31 @@ println "default_config = ${default_config}"
 /******************************************************************************\
  *  SKINNING
  \******************************************************************************/
-if(!skin.layout){
-    skin.layout = 'ala'
-}
 
-skin.orgNameLong = "Atlas of Living Australia"
-skin.orgNameShort = "ALA"
+skin.layout = 'ala'
+skin.benin.layout = 'generic'
+
+
+skin.orgNameLong = "GBIF France"
+skin.orgNameShort = "GBIF France"
 // whether crumb trail should include a home link that is external to this webabpp - ala.baseUrl is used if true
 skin.includeBaseUrl = true
-skin.taxaLinks.baseUrl = "http://bie.ala.org.au/species/"
+skin.taxaLinks.baseUrl = ""
 skin.headerUrl = "classpath:resources/generic-header.jsp" // can be external URL
 skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
 skin.fluidLayout = true // true or false
 skin.useAlaSpatialPortal = true
-skin.useAlaBie = true
-skin.taxaLinks.baseUrl = "http://bie.ala.org.au/species/" // 3rd party species pages. Leave blank for no links
-test.var = "ala-collectory"
+skin.useAlaBie = false
+skin.taxaLinks.baseUrl = "" // 3rd party species pages. Leave blank for no links
+test.var = "gbiffrance-collectory"
 
 /******************************************************************************\
  *  CAS SETTINGS
  *
  *  NOTE: Some of these will be ignored if default_config exists
  \******************************************************************************/
-security.cas.casServerName = 'https://auth.ala.org.au'
-security.cas.uriFilterPattern = '/admin, /admin/.*'
-security.cas.authenticateOnlyIfLoggedInPattern = "/occurrences/(?!.+userAssertions|facet.+).+,/explore/your-area"
-security.cas.uriExclusionFilterPattern = '/images.*,/css.*,/js.*'
-security.cas.loginUrl = 'https://auth.ala.org.au/cas/login'
-security.cas.logoutUrl = 'https://auth.ala.org.au/cas/logout'
-security.cas.casServerUrlPrefix = 'https://auth.ala.org.au/cas'
-security.cas.bypass = false // set to true for non-ALA deployment
-auth.admin_role = "ROLE_ADMIN"
+security.cas.bypass = true // set to true for non-ALA deployment
+security.cas.appServerName = "blah"
 
 
 /******************************************************************************\
@@ -67,25 +61,25 @@ if (!biocacheUiURL) {
     biocacheUiURL = "http://biocache.ala.org.au"
 }
 if(!biocacheServicesUrl){
-    biocacheServicesUrl = "http://biocache.ala.org.au/ws"
+    biocacheServicesUrl = "http://recherche-ws.gbif.fr"
 }
 if (!spatial.baseURL) {
-    spatial.baseURL = "http://spatial.ala.org.au/"
+    spatial.baseURL = "http://spatial.gbif.fr/"
 }
 if (!ala.baseURL) {
-    ala.baseURL = "http://www.ala.org.au"
+    ala.baseURL = "http://portail.gbif.fr"
 }
 if(!alertUrl){
     alertUrl = "http://alerts.ala.org.au/"
 }
 if(!speciesListToolUrl){
-    speciesListToolUrl = "http://lists.ala.org.au/speciesListItem/list/"
+    speciesListToolUrl = "http://listes.gbif.fr"
 }
 if(!alertResourceName){
     alertResourceName = "Atlas"
 }
 if(!uploadFilePath){
-    uploadFilePath = "/data/ala-collectory/upload/"
+    uploadFilePath = "/data/gbiffrance-collectory/upload/"
 }
 if(!uploadExternalUrlPath){
     uploadExternalUrlPath = "/upload/"
@@ -108,10 +102,10 @@ reloadable.cfgs = ["file:/data/${appName}/config/${appName}-config.properties"]
 *  TEMPLATES
 \******************************************************************************/
 if (!citation.template) {
-    citation.template = 'Records provided by @entityName@, accessed through ALA website.'
+    citation.template = 'Enregistrement fournis par @entityName@, accessible via le site du GBIF France.'
 }
 if (!citation.link.template) {
-    citation.link.template = 'For more information: @link@'
+    citation.link.template = 'Pour plus information : @link@'
 }
 if (!citation.rights.template) {
     citation.rights.template = ''
@@ -126,40 +120,40 @@ if(!projectNameShort){
     projectNameShort="Atlas"
 }
 if(!projectName){
-    projectName="Atlas of Living Australia"
+    projectName="Atlas of Living France"
 }
 if(!regionName){
-    regionName="Australia"
+    regionName="France"
 }
 if(!collectionsMap.centreMapLon){
-    collectionsMap.centreMapLon = '134'
+    collectionsMap.centreMapLon = '43.94834'
 }
 if(!collectionsMap.centreMapLat){
-    collectionsMap.centreMapLat = '-28.2'
+    collectionsMap.centreMapLat = '-4.80892'
 }
 if(!collectionsMap.defaultZoom){
     collectionsMap.defaultZoom = '2'
 }
 if(!eml.organizationName){
-    eml.organizationName="Atlas of Living Australia (ALA)"
+    eml.organizationName="GBIF France"
 }
 if(!eml.deliveryPoint){
-    eml.deliveryPoint="CSIRO Black Mountain Laboratories, Clunies Ross Street, ACTON"
+    eml.deliveryPoint="\n" + "GBIF FRANCE, MNHN Géologie, 43 rue Buffon CP 48 – 75005 Paris  –  France "
 }
 if(!eml.city){
-    eml.city="Canberra"
+    eml.city="Paris"
 }
 if(!eml.administrativeArea){
-    eml.administrativeArea="ACT"
+    eml.administrativeArea=""
 }
 if(!eml.postalCode){
-    eml.postalCode="2601"
+    eml.postalCode="75005"
 }
 if(!eml.country){
-    eml.country="Australia"
+    eml.country="France"
 }
 if(!eml.electronicMailAddress){
-    eml.electronicMailAddress = "info@ala.org.au"
+    eml.electronicMailAddress = "gbif@gbif.fr"
 }
 if (!gbifApiUrl) {
     gbifApiUrl = 'http://api.gbif.org/v1'
@@ -217,7 +211,7 @@ grails.validateable.packages = ['au.org.ala.collectory']
 
 /******* location of images **********/
 // default location for images
-repository.location.images = '/data/ala-collectory/data'
+repository.location.images = '/data/gbiffrance-collectory/data'
 
 grails.plugins.cookie.cookieage.default = 360 * 24 * 60 * 60
 
