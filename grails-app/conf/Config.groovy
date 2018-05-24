@@ -18,6 +18,7 @@ if (new File(default_config).exists()) {
 println "[${appName}] (*) grails.config.locations = ${grails.config.locations}"
 println "default_config = ${default_config}"
 
+
 /******************************************************************************\
  *  SKINNING
  \******************************************************************************/
@@ -28,11 +29,17 @@ skin.benin.layout = 'generic'
 
 skin.orgNameLong = "GBIF France"
 skin.orgNameShort = "GBIF France"
+skin.benin.orgNameLong = "GBIF Bénin"
+skin.benin.orgNameShort = "GBIF Bénin"
 // whether crumb trail should include a home link that is external to this webabpp - ala.baseUrl is used if true
 skin.includeBaseUrl = true
 skin.taxaLinks.baseUrl = ""
 skin.headerUrl = "classpath:resources/generic-header.jsp" // can be external URL
 skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
+headerAndFooter.baseURL= "http://layout.gbif.fr"
+skin.favicon= "http://layout.gbif.fr/picture/favicon.ico"
+headerAndFooter.benin.baseURL="http://layout-benin.gbif.fr"
+skin.benin.favicon= "http://layout-benin.gbif.fr/picture/favicon.ico"
 skin.fluidLayout = true // true or false
 skin.useAlaSpatialPortal = true
 skin.useAlaBie = false
@@ -44,8 +51,9 @@ test.var = "gbiffrance-collectory"
  *
  *  NOTE: Some of these will be ignored if default_config exists
  \******************************************************************************/
-security.cas.bypass = true // set to true for non-ALA deployment
-security.cas.appServerName = "blah"
+security.cas.bypass = true
+security.cas.service = " "
+auth.admin_role = "ROLE_ADMIN"
 
 
 /******************************************************************************\

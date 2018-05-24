@@ -95,6 +95,15 @@ class CrudService {
             } else {
                 address = null
             }
+
+            // CESP 2017 Benin - France : addition of the column publishingCountry in order to sort the page by publishing Country (css and link)
+
+            if( p.publishingCountry == ""){
+                publishingCountry = 'FR'
+            } else {
+                publishingCountry = p.publishingCountry
+            }
+
             phone = p.phone
             email = p.email
             pubShortDescription = p.pubShortDescription

@@ -118,7 +118,7 @@
             <g:textField name="websiteUrl"  class="form-control" value="${command?.websiteUrl}" />
         </div>
 
-        <g:if test="${command.ENTITY_TYPE in ['DataResource', 'Institution']}">
+        <g:if test="${command.ENTITY_TYPE in ['DataResource', 'Institution', 'DataProvider']}">
             <div class="form-group">
                 <label for="publishingCountry"><g:message code="dataResource.publishingCountry.label" default="Publishing Country"/><cl:helpText code="dataResource.institution"/></label>
                 <g:select name="publishingCountry" class="form-control"
