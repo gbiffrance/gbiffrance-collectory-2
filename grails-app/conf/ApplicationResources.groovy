@@ -8,4 +8,8 @@ modules = {
     institution_css {
         resource url: [dir:'css', file:'institution.css']
     }
+    datasetsBenin {
+        dependsOn 'jquery_i18n'
+        resource url:[dir:'js', file:'datasetsBenin.js']
+    }
 }

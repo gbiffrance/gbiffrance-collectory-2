@@ -12,11 +12,12 @@
     <link href="${beninBaseURL}/css/ala-styles.css" rel="stylesheet" type="text/css"/>
     <meta name="description" content="Exploration des jeux de données connectés via le ${orgNameLong}"/>
 
-    <title><g:layoutTitle/></title>
+
     <g:set var="fluidLayout" value="${pageProperty(name:'meta.fluidLayout')?:grailsApplication.config.skin?.fluidLayout}"/>
     <meta name="breadcrumb" content="${pageProperty(name: 'meta.breadcrumb', default: pageProperty(name: 'title').split('\\|')[0].decodeHTML())}"/>
     <meta name="breadcrumbParent" content="${pageProperty(name: 'meta.breadcrumbParent', default: "${createLink(action: 'map', controller: 'public')},${message(code: 'breadcrumb.collections')}")}"/>
 
+    <title><g:layoutTitle/></title>
 
     <r:script type="text/javascript" disposition="head">
           var COLLECTORY_CONF = {
