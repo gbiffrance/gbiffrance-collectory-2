@@ -603,9 +603,13 @@ class CrudService {
     }
 
     def insertInstitution(obj) {
+        println("test 1")
         Institution inst = new Institution(uid: idGeneratorService.getNextInstitutionId())
+        println("test 2")
         updateBaseProperties(inst, obj)
+        println("test 3")
         updateInstitutionProperties(inst, obj)
+        println("test 4")
         inst.userLastModified = obj.user ?: 'Data services'
         if (!inst.hasErrors()) {
             inst.save(flush: true)

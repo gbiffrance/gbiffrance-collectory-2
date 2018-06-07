@@ -9,3 +9,8 @@
     padding: 5px;
     text-transform: uppercase;
 }
+
+#breadcrumb>li {
+    display: inline;
+    margin-left: 0.5%;
+}

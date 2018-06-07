@@ -52,8 +52,6 @@ test.var = "gbiffrance-collectory"
  *  NOTE: Some of these will be ignored if default_config exists
  \******************************************************************************/
 security.cas.bypass = true
-security.cas.service = " "
-auth.admin_role = "ROLE_ADMIN"
 
 
 /******************************************************************************\

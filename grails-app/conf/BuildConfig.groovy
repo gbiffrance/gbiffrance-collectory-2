@@ -42,9 +42,9 @@ grails.project.dependency.resolution = {
         runtime ":cached-resources:1.0"
         build   ":release:3.0.1"
         runtime ":ala-bootstrap3:2.1.2"
-        runtime (":ala-auth:2.1.4") {
-            exclude "servlet-api"
-        }
+//        runtime (":ala-auth:2.1.4") {
+//            exclude "servlet-api"
+//        }
         build ':tomcat:7.0.54'
         compile ":build-info:1.2.6"
     }

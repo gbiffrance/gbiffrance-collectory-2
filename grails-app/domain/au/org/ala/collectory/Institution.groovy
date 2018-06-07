@@ -1,8 +1,8 @@
 package au.org.ala.collectory
-
-/**
- * Created by marie-eliselecoq on 5/16/18.
- */
+//import au.org.ala.collectory.ProviderGroup
+//import au.org.ala.collectory.InstitutionSummary
+//import au.org.ala.collectory.Attribution
+//import au.org.ala.collectory.DataLink
 
 class Institution extends ProviderGroup {
 
@@ -35,7 +35,7 @@ class Institution extends ProviderGroup {
         collections(nullable:true)
         childInstitutions(nullable:true)
         gbifCountryToAttribute(nullable:true, maxSize: 3)
-        publishingCountry(nullable:false, inList: publishingCountries)
+        publishingCountry(inList: publishingCountries)
     }
 
     static publishingCountries = ['FR','BJ']

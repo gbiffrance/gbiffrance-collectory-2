@@ -10,6 +10,41 @@ h1 {
     text-transform: uppercase;
 }
 
+h2{
+    border-bottom: 1px dotted #a6ac1a;
+    color: #a6ac1a;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+h4{
+    color: #a6ac1a;
+    font-size: 14px;
+    /*font-weight: 600;*/
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#breadcrumb>li{
+    display: inline;
+    margin-left: 0.5%;
+    text-rendering: geometricPrecision;
+}
+
+#content{
+    padding: 10px 10px 10px 20px;
+    background: white;
+    /*margin-left: 2%;*/
+    /*margin-right: 2%;*/
+    /*width: 96%;*/
+}
+
 #sidebarBoxXXX, #dataset-search {
     border : 1px solid #DDD;
     background-color: transparent;
@@ -47,5 +82,13 @@ h1 {
 
 #resultsReturned {
     font-size: 16px !important;
+}
+
+#overviewTabs li a{
+    /*color:#5C5C5C;*/
+    color: #5C5C5C;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
