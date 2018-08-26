@@ -139,32 +139,32 @@
         </div>
 
         <!-- images -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/images" model="[target: 'logoRef', image: instance.logoRef, title:'Logo', instance: instance]"/>
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/images" model="[target: 'imageRef', image: instance.imageRef, title:'Representative image', instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/images" model="[target: 'logoRef', image: instance.logoRef, title:'Logo', instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/images" model="[target: 'imageRef', image: instance.imageRef, title:'Representative image', instance: instance]"/>
 
         <!-- location -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/location" model="[instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/location" model="[instance: instance]"/>
 
         <!-- Record consumers -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/consumers" model="[instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/consumers" model="[instance: instance]"/>
 
         <!-- Contacts -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/contacts" model="[contacts: contacts, instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/contacts" model="[contacts: contacts, instance: instance]"/>
 
         <!-- Attributions -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/attributions" model="[instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/attributions" model="[instance: instance]"/>
 
         <!-- external identifiers -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/externalIdentifiers" model="[instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/externalIdentifiers" model="[instance: instance]"/>
 
         <!-- GBIF integration -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/userReports" model="[instance: instance, controller: 'dataProvider']"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/userReports" model="[instance: instance, controller: 'dataProvider']"/>
 
         <!-- GBIF integration -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/gbif" model="[instance: instance, controller: 'dataProvider']"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/gbif" model="[instance: instance, controller: 'dataProvider']"/>
 
         <!-- change history -->
-        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/changes" model="[changes: changes, instance: instance]"/>
+        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/shared/changes" model="[changes: changes, instance: instance]"/>
 
     </div>
     <div class="buttons">

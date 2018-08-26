@@ -1,5 +1,9 @@
+body{
+    background-color: #f2f2f2;
+}
+
 h1 {
-    border-bottom: 4px solid #cc424e;
+    border-bottom: 4px solid #cd853f;
     font-family: "Roboto",Helvetica,Arial,sans-serif;
     font-size: 1.5em;
     font-weight: 300;
@@ -11,8 +15,8 @@ h1 {
 }
 
 h2{
-    border-bottom: 1px dotted #a6ac1a;
-    color: #a6ac1a;
+    border-bottom: 1px dotted #808080;
+    color: #808080;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5em;
@@ -22,7 +26,7 @@ h2{
 }
 
 h4{
-    color: #a6ac1a;
+    color: #808080;
     font-size: 14px;
     /*font-weight: 600;*/
     line-height: 1.5em;
@@ -38,15 +42,24 @@ h4{
 }
 
 #content{
-    padding: 10px 10px 10px 20px;
+    padding: 2% 2% 2% 2%;
     background: white;
     /*margin-left: 2%;*/
     /*margin-right: 2%;*/
     /*width: 96%;*/
 }
 
+.btn-default{
+    border-color: #29892A;
+}
+
+#per-page, #sort, #dir{
+    border-color: #29892A;
+    background-color: white;
+}
+
 #sidebarBoxXXX, #dataset-search {
-    border : 1px solid #DDD;
+    border : 1px solid #29892A;
     background-color: transparent;
 }
 
@@ -69,27 +82,44 @@ h4{
 #dsFacets h4, #currentFilter h4{
     font-size: 1em;
     font-weight: 300;
-    font-family: "Roboto",Helvetica,Arial,sans-serif;
     margin-top: 0px;
-    border-bottom: 1px dotted rgb(203, 59, 89);
     text-transform: uppercase;
-    color: rgb(203, 59, 89);
 }
 
 #currentFilter a{
-    color: rgb(203, 59, 89);
+    color: #cd853f;
 }
 
 #resultsReturned {
     font-size: 16px !important;
 }
 
-#overviewTabs li a{
-    /*color:#5C5C5C;*/
-    color: #5C5C5C;
-    font-family: "Roboto",Helvetica,Arial,sans-serif;
+.result-name>a{
+    color: #cd853f;
     font-weight: 300;
-    text-transform: uppercase;
+}
+
+.viewRecords>a{
+    color: #cd853f;
+}
+
+.pagination{
+    display: inline;
+
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #29892A;
+    border-color: #29892A;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #29892A;
+}
+
+.row-partenaire{
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .breadcrumb-list>li{
@@ -102,5 +132,15 @@ h4{
     background-color: white;
     font-size: 80%;
     margin-bottom: 0px;
-    padding: 10px 10px 10px 20px;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.row-breadcrumb{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#header-ds{
+    margin: 0%;
 }

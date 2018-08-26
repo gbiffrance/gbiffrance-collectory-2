@@ -1,8 +1,4 @@
 package au.org.ala.collectory
-//import au.org.ala.collectory.ProviderGroup
-//import au.org.ala.collectory.InstitutionSummary
-//import au.org.ala.collectory.Attribution
-//import au.org.ala.collectory.DataLink
 
 class Institution extends ProviderGroup {
 
@@ -12,6 +8,7 @@ class Institution extends ProviderGroup {
     static final String ENTITY_PREFIX = 'in'
 
     static auditable = [ignore: ['version','dateCreated','lastUpdated','userLastModified']]
+
 
     String institutionType      // the type of institution, eg herbarium, library
 
@@ -27,18 +24,18 @@ class Institution extends ProviderGroup {
     static constraints = {
         // based on TDWG Ontology - http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/InstitutionType.rdf
         institutionType(nullable:true, maxSize:45,
-                inList:['aquarium', 'archive', 'botanicGarden', 'conservation', 'fieldStation', 'government',
-                        'governmentDepartment', 'herbarium', 'historicalSociety', 'horticulturalInstitution',
-                        'independentExpert', 'industry', 'laboratory', 'library', 'management', 'museum',
-                        'natureEducationCenter', 'nonUniversityCollege', 'park', 'repository', 'researchInstitute',
-                        'school', 'scienceCenter', 'society', 'university', 'voluntaryObserver', 'zoo'])
+                inList:['aquarium', 'archive', 'jardinBotanique', 'conservation', 'fieldStation', 'gouvernement',
+                        'departementGouvernemental', 'herbarium', 'sociétéHistorique', 'institutionHorticulture',
+                        'expertIndependant', 'industrie', 'laboratoire', 'bibliotheque', 'management', 'museum',
+                        'centreEducationNature', 'nonUniversite', 'parc', 'referentiel', 'institutRecherche',
+                        'ecole', 'centreRecherche', 'societe', 'university', 'volontariat', 'zoo'])
         collections(nullable:true)
         childInstitutions(nullable:true)
         gbifCountryToAttribute(nullable:true, maxSize: 3)
         publishingCountry(inList: publishingCountries)
     }
 
-    static publishingCountries = ['FR','BJ']
+    static publishingCountries = ['FR','BJ', 'N/A']
 
     static transients = ['summary','mappable']
 
@@ -127,6 +124,10 @@ class Institution extends ProviderGroup {
             }
         }
         return result
+    }
+
+    def listDataResource() {
+        return DataResource.findAllByInstitution(this)
     }
 
     /**

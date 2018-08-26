@@ -10,7 +10,125 @@
     text-transform: uppercase;
 }
 
-#breadcrumb>li {
+h1 {
+    border-bottom: 4px solid #cc424e;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    margin-top: 0;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+h2{
+    border-bottom: 1px dotted #a6ac1a;
+    color: #a6ac1a;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+h4{
+    color: #a6ac1a;
+    font-size: 14px;
+    /*font-weight: 600;*/
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#content{
+    padding: 2% 2% 2% 2%;
+    background-color: white;
+}
+
+/*
+.breadcrumb-list>li{
+    display: inline;
+    margin-left: 0.5%;
+    text-rendering: geometricPrecision;
+}
+
+.breadcrumb-list{
+    background-color: white;
+    font-size: 80%;
+    margin-bottom: 0px;
+    padding-top: 2%;
+    padding-left: 2%;
+} */
+
+.breadcrumb {
+    margin: 0% 2% 0% 2%;
+    background-color: white;
+    font-size: 80%;
+    padding: 0;
+    padding: 1% 1% 1% 1%;
+    border-radius: 0px;
+}
+
+.breadcrumb li:first-child {
+    background-image: url("img/arrow_state_grey_right.png");
+    background-position: -1px center;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb li:last-child{
+    color: #cb3b59;
+    font-weight: 700;
+}
+
+.breadcrumb>li {
     display: inline;
     margin-left: 0.5%;
 }
+
+.currentdate {
+    float: right;
+    font-size: 82%;
+    margin-right: -0.8%;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.breadcrumb a {
+    color: #897e78;
+    font-weight: 400;
+}
+
+.breadcrumb > li + li::before {
+    content: none;
+}
+
+.breadcrumb > li > .divider {
+    color: #ccc;
+    padding: 0 3px;
+}
+
+.row-partenaires{
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color: white;
+}
+
+.section h2, .section h2 span, .collectionsCount {
+    text-transform: none;
+}
+
+.filter-buttons .fungis a {
+    background: transparent url("/img/mycetes_button_bgwd.png") no-repeat;
+    background-size: 100%;
+}
+
+.filter-buttons .paleontology a {
+    background: transparent url("/img/paleontology_button_bgwd.png") no-repeat;
+    background-size: 100%;
+}
+
+

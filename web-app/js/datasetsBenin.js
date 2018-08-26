@@ -280,7 +280,7 @@ function showFilters() {
     $('#currentFilter').remove();
     if (currentFilters.length > 0) {
         // create the container
-        $('#currentFilterHolder').append('<div id="currentFilter"><h4><span class="FieldName">Current Filters</span></h4>' +
+        $('#currentFilterHolder').append('<div id="currentFilter"><h4><span class="FieldName">'+jQuery.i18n.prop('datasets.js.facets11')+'</span></h4>' +
             '<div id="subnavlist"><ul></ul></div></div>');
     }
     $.each(currentFilters, function(index, obj) {
@@ -410,7 +410,7 @@ function comparator(a, b) {
     var va, vb;
     var sortBy = $('select#sort').val();
     switch ($('select#sort').val()) {
-        case 'name':
+        case 'nom':
             va = a.name;
             vb = b.name;
             break;
@@ -418,7 +418,7 @@ function comparator(a, b) {
             va = a.resourceType;
             vb = b.resourceType;
             break;
-        case 'license':
+        case 'licence':
             va = a.licenseType;
             vb = b.licenseType;
             break;
@@ -435,7 +435,7 @@ function comparator(a, b) {
     va = va == null ? "" : va.toLowerCase();
     vb = vb == null ? "" : vb.toLowerCase();
 
-    if ($('select#dir').val() == 'ascending') {
+    if ($('select#dir').val() == 'ascendant') {
         return (va < vb ? -1 : (va > vb ? 1 : 0));
     }
     else {

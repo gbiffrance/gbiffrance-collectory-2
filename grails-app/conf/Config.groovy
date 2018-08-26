@@ -38,8 +38,8 @@ skin.headerUrl = "classpath:resources/generic-header.jsp" // can be external URL
 skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
 headerAndFooter.baseURL= "http://layout.gbif.fr"
 skin.favicon= "http://layout.gbif.fr/picture/favicon.ico"
-headerAndFooter.benin.baseURL="http://layout-benin.gbif.fr"
-skin.benin.favicon= "http://layout-benin.gbif.fr/picture/favicon.ico"
+headerAndFooter.benin.baseURL="http://layout.gbifbenin.org"
+skin.benin.favicon= "http://layout.gbifbenin.org/picture/favicon.ico"
 skin.fluidLayout = true // true or false
 skin.useAlaSpatialPortal = true
 skin.useAlaBie = false
@@ -53,7 +53,6 @@ test.var = "gbiffrance-collectory"
  \******************************************************************************/
 security.cas.bypass = true
 
-
 /******************************************************************************\
 *  EXTERNAL SERVERS
 \******************************************************************************/
@@ -64,17 +63,26 @@ if (!bie.searchPath) {
     bie.searchPath = "/search"
 }
 if (!biocacheUiURL) {
-    biocacheUiURL = "http://biocache.ala.org.au"
+    biocacheUiURL = "http://recherche.gbif.fr"
+}
+if (!biocacheUiBeninURL) {
+    biocacheUiBeninURL = "http://recherche.gbifbenin.org"
 }
 if(!biocacheServicesUrl){
     biocacheServicesUrl = "http://recherche-ws.gbif.fr"
 }
+
 if (!spatial.baseURL) {
     spatial.baseURL = "http://spatial.gbif.fr/"
 }
 if (!ala.baseURL) {
     ala.baseURL = "http://portail.gbif.fr"
 }
+
+if (!gbifbenin.baseURL) {
+    gbifbenin.baseURL= "http://portail.gbifbenin.org"
+}
+
 if(!alertUrl){
     alertUrl = "http://alerts.ala.org.au/"
 }
@@ -167,6 +175,8 @@ if (!gbifApiUrl) {
 if (!institution.codeLoaderURL) {
     institution.codeLoaderURL = 'file:/data/collectory/bootstrap/institution_codes.xml'
 }
+
+apikey = 'AIzaSyAJDtEeoy7Sc9pij2TAoVnmTwA34Q-2VHk'
 
 ///******* standard grails **********/
 grails.project.groupId = 'au.org.ala' // change this to alter the default package name and Maven publishing destination

@@ -16,7 +16,7 @@
     <title><cl:pageTitle>${fieldValue(bean: instance, field: "name")}</cl:pageTitle></title>
     <g:if test="${instance.publishingCountry == 'BJ'}">
         <meta name="layout" content="${grailsApplication.config.skin.benin.layout}"/>
-        <r:require modules="jquery, fancybox, jquery_jsonp, jquery_ui_custom, jstree, taxonTree, datadumper, jquery_i18n, collectory, charts_plugin"/>
+        <r:require modules="datasets_benin_css, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jstree, taxonTree, datadumper, jquery_i18n, collectory, charts_plugin"/>
     </g:if>
     <g:elseif test ="${instance.publishingCountry == 'FR'}">
         <meta name="layout" content="${grailsApplication.config.skin.layout}"/>
@@ -68,7 +68,7 @@
 
         <div class="col-md-4">
             <div id="dataAccessWrapper" style="display:none;">
-                <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/dataAccess" model="[instance:instance]"/>
+                <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/dataAccess" model="[instance:instance]"/>
             </div>
         </div>
     </section>
@@ -245,7 +245,7 @@
                                 <g:set var="contacts" value="${instance.dataProvider?.getContactsPrimaryFirst()}"/>
                             </g:if>
                         </g:else>
-                        <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/contacts" bean="${contacts}"/>
+                        <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/contacts" bean="${contacts}"/>
 
                     <!-- web site -->
                         <g:if test="${instance.resourceType == 'species-list'}">
@@ -283,7 +283,7 @@
                             </g:if>
 
                          <!-- external identifiers -->
-                            <g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/externalIdentifiers" model="[instance:instance]"/>
+                            <g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/externalIdentifiers" model="[instance:instance]"/>
                         </div>
                 </div>
 
@@ -362,7 +362,7 @@
       }
   }
 </r:script>
-<g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/taxonTree" model="[facet:'data_resource_uid', instance: instance]" />
-%{--<g:render template="/target/work/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/charts" model="[facet:'data_resource_uid', instance: instance]" />--}%
+<g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/taxonTree" model="[facet:'data_resource_uid', instance: instance]" />
+<g:render template="/plugins/collectory-1.9.2-SNAPSHOT/grails-app/views/public/charts" model="[facet:'data_resource_uid', instance: instance]" />
 </body>
 </html>

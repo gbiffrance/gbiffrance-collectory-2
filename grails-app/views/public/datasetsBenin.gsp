@@ -4,18 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="layout" content="${grailsApplication.config.skin.benin.layout}"/>
     <title><g:message code="public.datasets.title" /> | ${grailsApplication.config.projectName} </title>
-    <r:require modules="datasets_css, gbiffrance_collectory_css, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jquery_i18n, bbq, collectory, charts_plugin,datasetsBenin"/>
+    <r:require modules="datasetsBenin, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jquery_i18n, bbq, collectory, charts_plugin"/>
 </head>
-PROUUT
 <body id="page-datasets" class="nav-datasets">
 <div id="content">
-    <div id="header">
+    <div id="header-ds">
         <div class="full-width">
             <g:if test="${flash.message}">
                 <div class="message">${flash.message}</div>
             </g:if>
             <div>
-                <h2 id="metadata-header">  <g:message code="public.datasets.header.title" /></h2>
+                <h1 id="metadata-header">  <g:message code="public.datasets.header.title" /></h1>
                 <p><g:message code="public.datasets.header.message01" />.</p>
                 <p><g:message code="public.datasets.header.message03" /> <img style="vertical-align:middle;" src="${resource(dir:'/images/skin',file:'ExpandArrow.png')}"/><g:message code="public.datasets.header.message04" />.</p>
             </div><!--close hrgroup-->
@@ -33,7 +32,7 @@ PROUUT
             <div class="sidebar-header">
                 <h3><g:message code="public.datasets.sidebar.header" /></h3>
             </div>
-
+            <hr>
             <div id="currentFilterHolder">
             </div>
 
@@ -49,16 +48,16 @@ PROUUT
                     </div>
                     <form class="form-inline">
                         <div class="form-group ">
-                            <input type="text" name="dr-search" id="dr-search" class="form-control" style="width:500px;"/>
+                            <input type="text" name="dr-search" id="dr-search" class="form-control" style="width:300px;"/>
                         </div>
                         <button href="javascript:void(0);" title="Only show data sets which contain the search term"
                                 id="dr-search-link" class="form-control btn btn-default"><g:message code="public.datasets.drsearch.search" /></button>
                         <button href="javascript:reset()" title="Remove all filters and sorting options" class=" form-control btn btn-default">
                             <g:message code="public.datasets.drsearch.resetlist" />
                         </button>
-                        <button href="#" id="downloadLink" class="btn btn-default"
+                        <button href="#" id="downloadLink" class="form-control btn btn-default"
                                 title="Download metadata for datasets as a CSV file">
-                            <span class="glyphicon glyphicon-download"></span>
+                            %{--<span class="glyphicon glyphicon-download"></span>--}%
                             <g:message code="public.datasets.downloadlink.label" />
                         </button>
                     </form>
@@ -76,11 +75,11 @@ PROUUT
                         </div>
                         <div class="col-md-4">
                             <label for="sort"><g:message code="public.datasets.sortwidgets.sb" /></label>
-                            <g:select id="sort" name="sort" from="${['name','type','license']}"/>
+                            <g:select id="sort" name="sort" from="${['nom','type','licence']}"/>
                         </div>
                         <div class="col-md-4">
                             <label for="dir"><g:message code="public.datasets.sortwidgets.so" /></label>
-                            <g:select id="dir" name="dir" from="${['ascending','descending']}"/>
+                            <g:select id="dir" name="dir" from="${['ascendant','descendant']}"/>
                         </div>
                     </div>
                 </div><!--drop downs-->

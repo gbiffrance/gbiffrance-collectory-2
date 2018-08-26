@@ -1,3 +1,16 @@
+.breadcrumb-list>li{
+    display: inline;
+    margin-left: 0.5%;
+    text-rendering: geometricPrecision;
+}
+
+.breadcrumb-list{
+    background-color: white;
+    font-size: 80%;
+    margin-bottom: 0px;
+    padding: 10px 10px 10px 20px;
+}
+
 #overviewTabs li a{
     /*color:#5C5C5C;*/
     color: #5C5C5C;
@@ -12,8 +25,4 @@
     /*margin-left: 2%;*/
     /*margin-right: 2%;*/
     /*width: 96%;*/
-}
-
-.tab-pane:not(.active) {
-    display: none;
 }
