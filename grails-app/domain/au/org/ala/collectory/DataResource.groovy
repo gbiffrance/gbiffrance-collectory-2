@@ -132,7 +132,7 @@ class DataResource extends ProviderGroup implements Serializable {
         publishingCountry(nullable:false, inList: publishingCountries)
     }
 
-    static publishingCountries = ['FR','BJ']
+    static publishingCountries = ['FR','BJ', 'TG']
     static transients =  ['creativeCommons']
 
     static resourceTypeList = ["records", "website", "document", "uploads", "species-list"]

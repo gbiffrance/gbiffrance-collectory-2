@@ -35,7 +35,7 @@ class Institution extends ProviderGroup {
         publishingCountry(inList: publishingCountries)
     }
 
-    static publishingCountries = ['FR','BJ', 'N/A']
+    static publishingCountries = ['FR','BJ', 'TG', 'N/A']
 
     static transients = ['summary','mappable']
 

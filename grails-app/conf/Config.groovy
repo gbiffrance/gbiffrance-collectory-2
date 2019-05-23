@@ -25,12 +25,15 @@ println "default_config = ${default_config}"
 
 skin.layout = 'ala'
 skin.benin.layout = 'generic'
+skin.togo.layout = 'generic'
 
 
 skin.orgNameLong = "GBIF France"
 skin.orgNameShort = "GBIF France"
 skin.benin.orgNameLong = "GBIF Bénin"
 skin.benin.orgNameShort = "GBIF Bénin"
+skin.togo.orgNameLong = "GBIF Togo"
+skin.togo.orgNameShort = "GBIF Togo"
 // whether crumb trail should include a home link that is external to this webabpp - ala.baseUrl is used if true
 skin.includeBaseUrl = true
 skin.taxaLinks.baseUrl = ""
@@ -39,7 +42,9 @@ skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
 headerAndFooter.baseURL= "http://layout.gbif.fr"
 skin.favicon= "http://layout.gbif.fr/picture/favicon.ico"
 headerAndFooter.benin.baseURL="http://layout.gbifbenin.org"
+headerAndFooter.togo.baseURL="http://layout.gbiftogo.org"
 skin.benin.favicon= "http://layout.gbifbenin.org/picture/favicon.ico"
+skin.benin.favicon= "http://layout.gbiftogo.org/picture/favicon.ico"
 skin.fluidLayout = true // true or false
 skin.useAlaSpatialPortal = true
 skin.useAlaBie = false
@@ -68,6 +73,9 @@ if (!biocacheUiURL) {
 if (!biocacheUiBeninURL) {
     biocacheUiBeninURL = "http://recherche.gbifbenin.org"
 }
+if (!biocacheUiTogoURL) {
+    biocacheUiTogoURL = "http://recherche.gbiftogo.org"
+}
 if(!biocacheServicesUrl){
     biocacheServicesUrl = "http://recherche-ws.gbif.fr"
 }
@@ -81,6 +89,9 @@ if (!ala.baseURL) {
 
 if (!gbifbenin.baseURL) {
     gbifbenin.baseURL= "http://portail.gbifbenin.org"
+}
+if (!gbiftogo.baseURL) {
+    gbiftogo.baseURL= "http://portail.gbiftogo.org"
 }
 
 if(!alertUrl){

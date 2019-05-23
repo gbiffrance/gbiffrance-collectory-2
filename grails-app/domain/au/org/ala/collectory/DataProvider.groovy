@@ -38,7 +38,7 @@ class DataProvider extends ProviderGroup implements Serializable {
         publishingCountry(nullable:false, inList: publishingCountries)
     }
 
-    static publishingCountries = ['FR','BJ', 'N/A']
+    static publishingCountries = ['FR','BJ', 'TG', 'N/A']
 
     /**
      * Returns a summary of the data provider including:
