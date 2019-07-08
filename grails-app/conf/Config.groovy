@@ -42,9 +42,9 @@ skin.footerUrl = "classpath:resources/generic-footer.jsp" // can be external URL
 headerAndFooter.baseURL= "http://layout.gbif.fr"
 skin.favicon= "http://layout.gbif.fr/picture/favicon.ico"
 headerAndFooter.benin.baseURL="http://layout.gbifbenin.org"
-headerAndFooter.togo.baseURL="http://layout.gbiftogo.fr"
+headerAndFooter.togo.baseURL="http://layout.togo.gbif.fr"
 skin.benin.favicon= "http://layout.gbifbenin.org/picture/favicon.ico"
-skin.benin.favicon= "http://layout.gbiftogo.fr/picture/favicon.ico"
+skin.benin.favicon= "http://layout.togo.gbif.fr/picture/favicon.ico"
 skin.fluidLayout = true // true or false
 skin.useAlaSpatialPortal = true
 skin.useAlaBie = false
@@ -74,7 +74,7 @@ if (!biocacheUiBeninURL) {
     biocacheUiBeninURL = "http://recherche.gbifbenin.org"
 }
 if (!biocacheUiTogoURL) {
-    biocacheUiTogoURL = "http://recherche.gbiftogo.fr"
+    biocacheUiTogoURL = "http://recherche.togo.gbif.fr"
 }
 if(!biocacheServicesUrl){
     biocacheServicesUrl = "http://recherche-ws.gbif.fr"
@@ -91,7 +91,7 @@ if (!gbifbenin.baseURL) {
     gbifbenin.baseURL= "http://portail.gbifbenin.org"
 }
 if (!gbiftogo.baseURL) {
-    gbiftogo.baseURL= "http://portail.gbiftogo.fr"
+    gbiftogo.baseURL= "http://portail.togo.gbif.fr"
 }
 
 if(!alertUrl){
