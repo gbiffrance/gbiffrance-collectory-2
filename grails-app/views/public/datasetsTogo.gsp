@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="layout" content="${grailsApplication.config.skin.benin.layout}"/>
+    <meta name="layout" content="${grailsApplication.config.skin.togo.layout}"/>
     <title><g:message code="public.datasets.title" /> | ${grailsApplication.config.projectName} </title>
     <r:require modules="datasetsTogo, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jquery_i18n, bbq, collectory, charts_plugin"/>
 </head>

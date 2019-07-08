@@ -518,6 +518,13 @@ class PublicController {
 
     def datasetsBenin = {}
 
+    // CESP FRANCE - TOGO 2018 : /datasetsTogo will now show only Togo datasets
+    def dataSetsTogo = {
+        forward(action: 'datasetsTogo')
+    }
+
+    def datasetsTogo = {}
+
 
     def datasets = {
         forward(action: 'dataSets')
@@ -532,7 +539,7 @@ class PublicController {
         render drs as JSON
     }
 
-    // CESP BENIN - FRANCE 2017 : /public/resourcesFrance.json will now show only French datasets
+    // CESP BENIN - FRANCE 2017 : /public/resourcesFrance.json will now show only French resources
 
     def resourcesFrance = {
         cache shared:true, validFor: 3600*24
@@ -551,11 +558,30 @@ class PublicController {
         render drs as JSON
     }
 
-    // CESP BENIN - FRANCE 2017 : /public/resourcesBenin.json will now show only Beninese datasets
+    // CESP BENIN - FRANCE 2017 : /public/resourcesBenin.json will now show only Beninese resources
 
     def resourcesBenin = {
         cache shared:true, validFor: 3600*24
         def drs = DataResource.findAllByStatusNotEqualAndPublishingCountry('declined', 'BJ', [sort:'name']).collect {
+            //def drs = DataResource.list([sort:'name']).collect {
+            def pdesc = it.pubDescription ? cl.formattedText(dummy:'1',limit(it.pubDescription,1000)) : ""
+            def tdesc = it.techDescription ? cl.formattedText(dummy:'1',limit(it.techDescription,1000)) : ""
+            def inst = it.institution
+            def instName = (inst && inst.name.size() > 36 && inst.acronym) ? inst.acronym : inst?.name
+
+            [name: it.name, resourceType: it.resourceType, licenseType: it.licenseType,
+             licenseVersion: it.licenseVersion, pubDescription: pdesc, techDescription: tdesc,
+             uid: it.uid, status: it.status, websiteUrl: it.websiteUrl, contentTypes: it.contentTypes,
+             institution: instName, publishingCountry: it.publishingCountry ]
+        }
+        render drs as JSON
+    }
+
+    // CESP FRANCE - TOGO 2018 : /public/resourcesTogo.json will now show only Togo resources
+
+    def resourcesTogo = {
+        cache shared:true, validFor: 3600*24
+        def drs = DataResource.findAllByStatusNotEqualAndPublishingCountry('declined', 'TG', [sort:'name']).collect {
             //def drs = DataResource.list([sort:'name']).collect {
             def pdesc = it.pubDescription ? cl.formattedText(dummy:'1',limit(it.pubDescription,1000)) : ""
             def tdesc = it.techDescription ? cl.formattedText(dummy:'1',limit(it.techDescription,1000)) : ""

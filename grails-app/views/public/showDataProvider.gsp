@@ -11,6 +11,10 @@
         <meta name="layout" content="${grailsApplication.config.skin.benin.layout}"/>
         <r:require modules="data_provider_benin, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jstree, taxonTree, datadumper, jquery_i18n, collectory, charts_plugin"/>
     </g:if>
+    <g:elseif test ="${instance.publishingCountry == 'TG'}">
+        <meta name="layout" content="${grailsApplication.config.skin.togo.layout}"/>
+        <r:require modules="data_provider_togo, datasets_css, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jstree, taxonTree, datadumper, jquery_i18n, collectory, charts_plugin"/>
+    </g:elseif>
     <g:elseif test ="${instance.publishingCountry == 'FR'}">
         <meta name="layout" content="${grailsApplication.config.skin.layout}"/>
         <r:require modules="data_provider, datasets_css, jquery, fancybox, jquery_jsonp, jquery_ui_custom, jstree, taxonTree, datadumper, jquery_i18n, collectory, charts_plugin"/>

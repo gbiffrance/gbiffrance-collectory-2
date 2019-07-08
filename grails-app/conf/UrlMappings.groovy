@@ -12,12 +12,12 @@ class UrlMappings {
 
         // data sets
         "/datasets" (controller: 'public', action: 'dataSets')
-
-        // data sets
         "/datasetsBenin" (controller: 'public', action: 'dataSetsBenin')
+        "/datasetsTogo" (controller: 'public', action: 'dataSetsTogo')
 
         "/public/resourcesFrance(.$format)"(controller:'public', action:'resourcesFrance')
         "/public/resourcesBenin(.$format)"(controller:'public', action:'resourcesBenin')
+        "/public/resourcesTogo(.$format)"(controller:'public', action:'resourcesTogo')
         "/data/$directory/$file" {
             controller = 'data'
             action = 'serveFile'

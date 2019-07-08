@@ -15,6 +15,10 @@
         <meta name="layout" content="${grailsApplication.config.skin.benin.layout}"/>
         <r:require modules="institution_benin, jquery, fancybox, jquery_jsonp, charts_plugin"/>
     </g:if>
+    <g:elseif test ="${instance.publishingCountry == 'TG'}">
+        <meta name="layout" content="${grailsApplication.config.skin.togo.layout}"/>
+        <r:require modules="institution_togo, jquery, fancybox, jquery_jsonp, charts_plugin"/>
+    </g:elseif>
     <g:elseif test ="${instance.publishingCountry == 'FR'}">
         <meta name="layout" content="${grailsApplication.config.skin.layout}"/>
         <r:require modules="institution_css, jquery, fancybox, jquery_jsonp, charts_plugin"/>
